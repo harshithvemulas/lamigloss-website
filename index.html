@@ -1,37 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lamigloss - Where Walls Meet Luxury</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lamigloss – Premium Marble Sheets, Wall Panels & Louvers</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="hero">
-  <img src="assets/A_website_homepage_image_for_\"Lamigloss\"_showcases.png" class="hero-bg">
-  <div class="hero-content">
-    <h1>Where Walls Meet Luxury ✨</h1>
-    <p>Premium PVC Marble Sheets, Wall Panels, Ceiling Panels & Louvers</p>
-    <a href="products.html" class="btn">Explore Products</a>
-    <a href="contact.html" class="btn-outline">Contact Us</a>
+<!-- ====================================
+   PREMIUM FLOATING HEADER
+==================================== -->
+<header class="lg-header">
+  <div class="header-container container d-flex justify-content-between align-items-center py-3">
+
+    <!-- Logo -->
+    <div class="logo-wrapper">
+      <a href="index.html">
+        <img src="assets/logo.png" class="logo-img" alt="Lamigloss Logo">
+      </a>
+      <div class="logo-tagline">Walls Meet Luxury</div>
+    </div>
+
+    <!-- Desktop Navigation -->
+    <nav class="d-none d-md-flex gap-4 header-links">
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#catalogue">Catalogue</a>
+      <a href="#contact-footer">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <div class="menu-btn d-md-none" onclick="toggleMenu()">☰</div>
+
+    <!-- Header social icons (desktop) -->
+    <div class="social-icons d-none d-md-flex align-items-center gap-3 ms-4">
+      <a href="https://instagram.com/lamigloss_" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://youtube.com/@lamigloss" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://wa.me/919000000000" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
+
   </div>
+
+  <!-- Mobile Nav -->
+  <nav id="mobileNav" class="mobile-nav d-md-none">
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#catalogue">Catalogue</a>
+    <a href="#contact-footer">Contact</a>
+
+    <div class="mobile-social mt-3">
+      <a href="https://instagram.com/lamigloss" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://youtube.com/@lamigloss" target="_blank"><i class="bi bi-youtube"></i></a>
+      <a href="https://wa.me/919000000000" target="_blank"><i class="bi bi-whatsapp"></i></a>
+    </div>
+  </nav>
 </header>
 
-<section class="section">
-  <h2>Our Product Highlights</h2>
-  <div class="grid">
-    <div class="card"><img src="assets/A_screenshot_of_a_homepage_for_Lamigloss,_a_compan.png"><h3>PVC Marble Sheets</h3></div>
-    <div class="card"><img src="assets/A_screenshot_of_a_homepage_for_Lamigloss,_a_compan.png"><h3>Wall Panels</h3></div>
-    <div class="card"><img src="assets/A_screenshot_of_a_homepage_for_Lamigloss,_a_compan.png"><h3>Ceiling Panels</h3></div>
-    <div class="card"><img src="assets/A_screenshot_of_a_homepage_for_Lamigloss,_a_compan.png"><h3>Louvers</h3></div>
+
+
+<!-- ====================================
+   HERO SLIDER
+==================================== -->
+<!-- ====================================
+   HERO SLIDER
+==================================== -->
+<section class="hero-slider">
+  <div id="lamiglossCarousel" class="carousel slide" data-bs-ride="carousel">
+
+    <div class="carousel-inner">
+
+      <!-- SLIDE 1 – MARBLE SHEETS -->
+      <div class="carousel-item active">
+        <div class="slider-bg" style="background-image: url('assets/interior1.png');"></div>
+        <div class="container slider-content">
+          <h1 class="slider-title">PVC Marble Sheets</h1>
+          <div class="tagline">Walls Meet Luxury</div>
+          <p class="slider-text">
+            High-gloss PVC marble sheets with rich stone textures – perfect for feature walls,
+            kitchens and premium interiors.
+          </p>
+          <div class="slider-btns">
+            <a href="#products" class="btn btn-dark px-4 py-2">Explore Products</a>
+            <a href="#contact-footer" class="btn btn-outline-light px-4 py-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 2 – WALL PANELS -->
+      <div class="carousel-item">
+        <div class="slider-bg" style="background-image: url('assets/interior2.png');"></div>
+        <div class="container slider-content">
+          <h1 class="slider-title">Wall Panels</h1>
+          <div class="tagline">Walls Meet Luxury</div>
+          <p class="slider-text">
+            Textured and designer wall panels that add depth, warmth and character to any space.
+          </p>
+          <div class="slider-btns">
+            <a href="#products" class="btn btn-dark px-4 py-2">Explore Products</a>
+            <a href="#contact-footer" class="btn btn-outline-light px-4 py-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 3 – LOUVERS -->
+      <div class="carousel-item">
+        <div class="slider-bg" style="background-image: url('assets/interior3.png');"></div>
+        <div class="container slider-content">
+          <h1 class="slider-title">Louvers</h1>
+          <div class="tagline">Walls Meet Luxury</div>
+          <p class="slider-text">
+            Modern vertical louvers for accent walls, partitions and stylish room dividers.
+          </p>
+          <div class="slider-btns">
+            <a href="#products" class="btn btn-dark px-4 py-2">Explore Products</a>
+            <a href="#contact-footer" class="btn btn-outline-light px-4 py-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SLIDE 4 – CEILING PANELS -->
+      <div class="carousel-item">
+        <div class="slider-bg" style="background-image: url('assets/interior4.png');"></div>
+        <div class="container slider-content">
+          <h1 class="slider-title">Ceiling Panels</h1>
+          <div class="tagline">Walls Meet Luxury</div>
+          <p class="slider-text">
+            Lightweight ceiling panels with clean lines and premium finishes for modern interiors.
+          </p>
+          <div class="slider-btns">
+            <a href="#products" class="btn btn-dark px-4 py-2">Explore Products</a>
+            <a href="#contact-footer" class="btn btn-outline-light px-4 py-2">Contact Us</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#lamiglossCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target="#lamiglossCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
   </div>
 </section>
 
-<footer>
-  © 2025 Lamigloss. All Rights Reserved.
+
+
+<!-- ====================================
+   ABOUT LAMIGLOSS
+==================================== -->
+<section id="about" class="container py-5">
+  <div class="row align-items-center">
+    
+    <div class="col-md-6">
+      <h2 class="section-title">Walls Meet Luxury</h2>
+
+      <p>
+        Lamigloss is a premium Indian manufacturer of PVC marble sheets, wall panels, 
+        ceiling panels, and louvers — designed to transform modern interiors with style, 
+        strength, and sophistication.
+      </p>
+
+
+      <p class="mt-3">
+        With state-of-the-art manufacturing and uncompromised quality standards, 
+        Lamigloss delivers durable, waterproof, termite-proof, and fire-retardant 
+        materials crafted for homes, offices, and commercial spaces.
+      </p>
+
+      <a href="about.html" class="btn btn-dark mt-3">Learn More</a>
+    </div>
+
+    <div class="col-md-6">
+      <img src="assets/Make_In_India.png" class="img-fluid rounded shadow-sm" alt="About Lamigloss">
+    </div>
+
+  </div>
+</section>
+
+<!-- ====================================
+   WHY CHOOSE US
+==================================== -->
+<section class="why-section py-5 text-center">
+  <div class="container">
+    <h2 class="section-title">Why Choose Lamigloss?</h2>
+    <div class="row mt-4">
+
+      <div class="col-md-4">
+        <i class="bi bi-gem why-icon"></i>
+        <h4>Premium Aesthetic</h4>
+        <p>Ultra-realistic marble textures for elegant interiors.</p>
+      </div>
+
+      <div class="col-md-4">
+        <i class="bi bi-shield-check why-icon"></i>
+        <h4>Durable & Long-lasting</h4>
+        <p>Waterproof, termite-proof, and fire-resistant materials.</p>
+      </div>
+
+      <div class="col-md-4">
+        <i class="bi bi-lightning why-icon"></i>
+        <h4>Easy Installation</h4>
+        <p>Lightweight and hassle-free installation.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ====================================
+   PRODUCT CATEGORIES
+==================================== -->
+<section id="products" class="container py-5">
+  <h2 class="section-title text-center mb-4">Our Products</h2>
+
+  <div class="row">
+
+    <div class="col-md-3 col-sm-6 mb-3">
+      <div class="product-card">
+        <img src="assets/marble-white.png" class="img-fluid" alt="PVC Marble Sheets">
+        <h4>PVC Marble Sheets</h4>
+        <p>High-gloss, durable, and elegant stone alternatives.</p>
+      </div>
+    </div>
+
+
+    <div class="col-md-3 col-sm-6 mb-3">
+      <div class="product-card">
+        <img src="assets/ceilingpanel.png" class="img-fluid" alt="Ceiling Panels">
+        <h4>Ceiling Panels</h4>
+        <p>Lightweight, stylish, and easy-to-install ceilings.</p>
+      </div>
+    </div>
+
+    <div class="col-md-3 col-sm-6 mb-3">
+      <div class="product-card">
+        <img src="assets/louvers.png" class="img-fluid" alt="Louvers">
+        <h4>Louvers</h4>
+        <p>Minimal, modern vertical accents for feature walls.</p>
+      </div>
+    </div>
+        <div class="col-md-3 col-sm-6 mb-3">
+      <div class="product-card">
+        <img src="assets/wallpanel1.jpeg" class="img-fluid" alt="Wall Panels">
+        <h4>Wall Panels</h4>
+        <p>Modern decorative textures for interior walls.</p>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- ====================================
+   CATALOGUE SECTION
+==================================== -->
+<section id="catalogue" class="catalog-section py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-3">View & Download Our Catalogues</h2>
+    <p class="text-center mb-4 text-muted">
+      Explore our complete range of designs and finishes across marble sheets, wall panels,
+      ceiling panels, and louvers.
+    </p>
+
+    <div class="row g-4">
+
+      <!-- Marble Sheets Catalogue -->
+      <div class="col-md-3 col-sm-6">
+        <div class="catalog-card">
+          <h4>Marble Sheets</h4>
+          <p>All marble finishes, textures & collections.</p>
+          <div class="d-flex flex-column gap-2">
+            <a href="assets/LamiglosMarbleSheetCatalogue.pdf" target="_blank" class="btn btn-dark btn-sm w-100">
+              View Catalogue
+            </a>
+            <a href="assets/LamiglosMarbleSheetCatalogue.pdf" download class="btn btn-outline-dark btn-sm w-100">
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Wall Panels Catalogue -->
+      <div class="col-md-3 col-sm-6">
+        <div class="catalog-card">
+          <h4>Wall Panels</h4>
+          <p>3D designs, textures & feature wall ideas.</p>
+          <div class="d-flex flex-column gap-2">
+            <a href="assets/catalogue-wall-panels.pdf" target="_blank" class="btn btn-dark btn-sm w-100">
+              View Catalogue
+            </a>
+            <a href="assets/catalogue-wall-panels.pdf" download class="btn btn-outline-dark btn-sm w-100">
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ceiling Panels Catalogue -->
+      <div class="col-md-3 col-sm-6">
+        <div class="catalog-card">
+          <h4>Ceiling Panels</h4>
+          <p>Ceiling concepts, patterns & combinations.</p>
+          <div class="d-flex flex-column gap-2">
+            <a href="assets/catalogue-ceiling-panels.pdf" target="_blank" class="btn btn-dark btn-sm w-100">
+              View Catalogue
+            </a>
+            <a href="assets/catalogue-ceiling-panels.pdf" download class="btn btn-outline-dark btn-sm w-100">
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Louvers Catalogue -->
+      <div class="col-md-3 col-sm-6">
+        <div class="catalog-card">
+          <h4>Louvers</h4>
+          <p>Vertical louvers, colours & profiles.</p>
+          <div class="d-flex flex-column gap-2">
+            <a href="assets/catalogue-louvers.pdf" target="_blank" class="btn btn-dark btn-sm w-100">
+              View Catalogue
+            </a>
+            <a href="assets/catalogue-louvers.pdf" download class="btn btn-outline-dark btn-sm w-100">
+              Download PDF
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- ====================================
+   CALL TO ACTION
+==================================== -->
+<section class="cta-section py-5 text-center">
+  <h2>Ready to Transform Your Space?</h2>
+  <a href="#contact-footer" class="btn btn-dark px-4 py-2 mt-3">Talk to Our Team</a>
+</section>
+
+
+
+<!-- ====================================
+   COMBINED CONTACT + FOOTER
+==================================== -->
+<footer id="contact-footer" class="footer pt-5">
+  <div class="container">
+    <div class="row gy-4">
+
+      <!-- Column 1: Logo & tagline -->
+      <div class="col-md-4 text-center text-md-start">
+        <img src="assets/logo.png" class="footer-logo mb-2" alt="Lamigloss Footer Logo">
+        <p class="mb-1 fw-semibold">Walls Meet Luxury</p>
+        <p class="mb-0">Premium PVC marble sheets, wall panels, ceiling panels & louvers.</p>
+
+        <div class="footer-social mt-3">
+          <a href="https://instagram.com/lamigloss" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="https://youtube.com/@lamigloss" target="_blank"><i class="bi bi-youtube"></i></a>
+          <a href="https://wa.me/919000000000" target="_blank"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Contact details -->
+      <div class="col-md-4">
+        <h5 class="mb-3">Contact Details</h5>
+        <p class="mb-1"><i class="bi bi-telephone me-2"></i> +91 8179221691</p>
+        <p class="mb-1"><i class="bi bi-envelope me-2"></i> support@lamigloss.in</p>
+        <p class="mb-1"><i class="bi bi-clock me-2"></i> Mon – Sat, 9:30 AM – 6:30 PM</p>
+        <p class="mb-0"><i class="bi bi-geo-alt me-2"></i> Hyderabad, Telangana, India</p>
+      </div>
+
+      <!-- Column 3: Manufacturing & map -->
+      <div class="col-md-4">
+        <h5 class="mb-3">Manufacturing Unit</h5>
+        <p class="mb-1"><strong>Lamigloss Manufacturing Plant</strong></p>
+        <p class="mb-2">
+          AS Laminates<br>
+          Madgulapally<br>
+          Telangana, 508374<br>
+          India
+        </p>
+        <!-- <div class="footer-map">
+          <iframe 
+            src="https://maps.google.com/maps?q=hyderabad&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            width="100%" height="160" style="border:0;" loading="lazy">
+          </iframe>
+        </div> -->
+      </div>
+
+    </div>
+
+    <div class="footer-bottom text-center pt-3 mt-4 border-top border-secondary">
+      <p class="mb-1">© 2025 Lamigloss. All Rights Reserved.</p>
+      <p class="mb-0">Proudly Made in India 🇮🇳 • Walls Meet Luxury</p>
+    </div>
+    </div>
 </footer>
 
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="script.js"></script>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919000000000" class="whatsapp-float" target="_blank">
+  <i class="bi bi-whatsapp"></i>
+</a>
+
 </body>
 </html>

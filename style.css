@@ -1,11 +1,490 @@
-body {margin:0; font-family:Arial; background:#f6f6f6;}
-.hero {position:relative; height:90vh; overflow:hidden;}
-.hero-bg {width:100%; height:100%; object-fit:cover; filter:brightness(0.6);}
-.hero-content {position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); text-align:center; color:white;}
-.btn {padding:12px 24px; background:#3267ff; color:white; border-radius:6px; text-decoration:none; margin:5px; display:inline-block;}
-.btn-outline {padding:12px 24px; background:white; color:#333; border-radius:6px; margin:5px; display:inline-block;}
-.section {padding:60px; text-align:center;}
-.grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:20px;}
-.card {background:white; padding:20px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.1);}
-.card img {width:100%; border-radius:10px;}
-footer {padding:20px; text-align:center; background:#111; color:#bbb;}
+/* =========================================
+   GLOBAL
+========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Utility */
+.section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+/* =========================================
+   HEADER – FLOATING OVER SLIDER
+========================================= */
+
+.lg-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 20;
+  background: transparent;
+}
+
+.header-container {
+  display: flex;
+}
+
+/* Logo area with white chip */
+.logo-wrapper {
+  background: #ffffff;
+  padding: 6px 14px;
+
+}
+
+.logo-img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logo-img {
+    height: 52px;
+  }
+}
+
+/* Header links floating over slider */
+.header-links a {
+  color: #000;
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.header-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #111;
+  transition: width 0.25s ease;
+}
+
+.header-links a:hover::after {
+  width: 100%;
+}
+
+/* Mobile menu button */
+.menu-btn {
+  font-size: 1.7rem;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Mobile nav */
+.mobile-nav {
+  display: none;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.98);
+  border-top: 1px solid #eee;
+  padding: 8px 0 12px;
+}
+
+.mobile-nav a {
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* =========================================
+   HERO SLIDER
+========================================= */
+
+.hero-slider {
+  margin: 0;
+  padding-top: 110px; /* space for header */
+  position: relative;
+}
+
+/* Background image of each slide */
+.slider-bg {
+  height: 90vh;
+  min-height: 520px;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(65%);  /* darker for better contrast */
+}
+
+
+/* Content on top of slide */
+
+.slider-title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.slider-content {
+  position: absolute;
+  top: 22%;
+  left: 8%;
+  max-width: 460px;
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.slider-text {
+  font-size: 1.05rem;
+  margin-bottom: 18px;
+  color: #f3f3f3;
+}
+
+/* Buttons */
+.slider-btns .btn {
+  border-radius: 999px;
+  font-size: 0.95rem;
+}
+
+/* Product image overlay */
+.product-img {
+  position: absolute;
+  bottom: 8%;
+  right: 10%;
+  width: 260px;
+  max-width: 40vw;
+  border-radius: 8px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Carousel controls visibility on bright bg */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+/* Responsive hero */
+@media (max-width: 992px) {
+  .slider-content {
+    top: 20%;
+    left: 6%;
+    max-width: 360px;
+  }
+
+  .slider-title {
+    font-size: 2.4rem;
+  }
+
+  .product-img {
+    width: 200px;
+    right: 6%;
+    bottom: 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-slider {
+    padding-top: 96px;
+  }
+
+  .slider-bg {
+    height: 80vh;
+  }
+
+  .slider-content {
+    position: absolute;
+    top: 18%;
+    left: 5%;
+    right: 5%;
+    max-width: 100%;
+  }
+
+  .slider-title {
+    font-size: 2rem;
+  }
+
+  .slider-text {
+    font-size: 0.95rem;
+  }
+
+  .product-img {
+    width: 150px;
+    right: 4%;
+    bottom: 4%;
+  }
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+#about {
+  background: #ffffff;
+
+}
+
+#about p {
+  color: #555;
+}
+
+/* =========================================
+   WHY CHOOSE US
+========================================= */
+
+.why-section {
+  background: #f2f4f7;
+}
+
+.why-icon {
+  font-size: 2rem;
+  color: #c9a227;
+  margin-bottom: 8px;
+}
+
+.why-section h4 {
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.why-section p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* =========================================
+   PRODUCT CARDS
+========================================= */
+
+#products {
+  background: #ffffff;
+}
+
+.product-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  padding: 14px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card img {
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.product-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================================
+   CATALOGUE SECTION
+========================================= */
+
+.catalog-section {
+  background: #ffffff;
+}
+
+.catalog-card {
+  background: #f9fafb;
+  border-radius: 16px;
+  padding: 16px 16px 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid #eee;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.catalog-card h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.catalog-card p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* =========================================
+   CTA SECTION
+========================================= */
+
+.cta-section {
+  background: #111827;
+  color: #ffffff;
+}
+
+.cta-section h2 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+#contact {
+  background: #ffffff;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+/* FOOTER */
+.footer {
+  background: #111827;
+  color: #e5e7eb;
+}
+
+.footer-logo {
+  height: 42px;
+  width: auto;
+}
+
+/* Social icons (already in your CSS, keep as is) */
+.footer-social a {
+  color: #e5e7eb;
+}
+
+/* Optional: footer map small rounding */
+.footer-map iframe {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Footer bottom text */
+.footer-bottom p {
+  font-size: 0.9rem;
+}
+
+
+/* =========================================
+   WHATSAPP FLOAT
+========================================= */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  background: #25d366;
+  color: #fff;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+  z-index: 999;
+  transition: transform 0.2s;
+}
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.social-icons a,
+.footer-social a,
+.contact-social a,
+.mobile-social a,
+.cta-social a {
+  font-size: 1.4rem;
+  color: #111;
+  margin: 0 8px;
+  transition: 0.3s ease;
+}
+
+.footer-social a {
+  color: #e5e7eb;
+}
+
+.social-icons a:hover,
+.footer-social a:hover,
+.contact-social a:hover,
+.mobile-social a:hover,
+.cta-social a:hover {
+  color: #c9a227; /* Gold hover */
+}
+
+/* =========================================
+   TAGLINES & BADGES
+========================================= */
+
+.logo-tagline {
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-align: center;
+  margin-top: -2px;
+  color: #333;
+}
+
+.make-india-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff3cd;
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: fit-content;
+  border: 1px solid #f1d179;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #8c6c00;
+}
+
+.make-india-icon {
+  height: 32px;
+  width: auto;
+}
+
+.tagline {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #f8f8f8;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* =========================================
+   SMALL TWEAKS
+========================================= */
+
+html {
+  scroll-behavior: smooth;
+}
